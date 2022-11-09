@@ -4,15 +4,16 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Email
-import androidx.compose.material.icons.filled.Favorite
-import androidx.compose.material.icons.filled.ThumbUp
 import androidx.compose.material.icons.outlined.ThumbUp
 import androidx.compose.material.icons.rounded.Close
 import androidx.compose.material.icons.sharp.Favorite
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment.Companion.BottomEnd
+import androidx.compose.ui.Alignment.Companion.Center
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
+import androidx.compose.ui.Alignment.Companion.CenterStart
+import androidx.compose.ui.Alignment.Companion.TopCenter
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
@@ -54,8 +55,29 @@ fun PremierEcran() {
                     Icon(Icons.Default.Email, contentDescription = null)
                 }
                 Icon(Icons.Outlined.ThumbUp, contentDescription = null)
-                Icon(Icons.Rounded .Close, contentDescription = null)
-                Icon(Icons.Sharp .Favorite, contentDescription = null)
+                Icon(Icons.Rounded.Close, contentDescription = null)
+                Icon(Icons.Sharp.Favorite, contentDescription = null)
+            }
+
+            Box(
+                Modifier
+                    .size(500.dp)
+                    .background(Color.Green)
+            ) {
+                Text(
+                    "Hello",
+                    modifier = Modifier.align(CenterStart)
+                )
+                Text(
+                    "Blabla",
+                    modifier = Modifier.align(Center)
+                )
+                Button(
+                    onClick = { /*TODO*/ },
+                    modifier = Modifier.align(BottomEnd)
+                ) {
+                    Text(text = "Don't click me, plz")
+                }
             }
         }
     }
