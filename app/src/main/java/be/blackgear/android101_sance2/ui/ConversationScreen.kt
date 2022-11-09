@@ -35,8 +35,9 @@ fun ConversationScreen(
 @Composable
 fun MessageCard(message: String, author: String, date: String, modifier: Modifier = Modifier) {
     Card(modifier = modifier) {
-        Column {
+        Column(modifier = Modifier.padding(all = 16.dp)) {
             Text(message)
+            Spacer(Modifier.height(24.dp))
             Text("$author - $date")
         }
     }
