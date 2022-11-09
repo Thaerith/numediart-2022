@@ -1,5 +1,6 @@
 package be.blackgear.android101_sance2.ui
 
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.Scaffold
@@ -20,7 +21,7 @@ fun ConversationScreen(
         }
     }
 ) {
-    Column {
+    Box {
         LazyColumn {}
         TextField(value = message, onValueChange = onMessageChange)
     }
