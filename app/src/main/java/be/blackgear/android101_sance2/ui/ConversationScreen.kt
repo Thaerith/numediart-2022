@@ -1,5 +1,6 @@
 package be.blackgear.android101_sance2.ui
 
+import androidx.compose.foundation.layout.Column
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
@@ -13,7 +14,11 @@ fun ConversationScreen() = Scaffold(
             Text("SemiSsenger")
         }
     }
-) {}
+) {
+    Column {
+
+    }
+}
 
 @Preview
 @Composable
