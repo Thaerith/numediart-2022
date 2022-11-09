@@ -10,7 +10,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
-fun ConversationScreen() = Scaffold(
+fun ConversationScreen(
+    message: String,
+    onMessageChange: (String) -> Unit,
+) = Scaffold(
     topBar = {
         TopAppBar {
             Text("SemiSsenger")
@@ -19,9 +22,13 @@ fun ConversationScreen() = Scaffold(
 ) {
     Column {
         LazyColumn {}
+        TextField(value = message, onValueChange = onMessageChange)
     }
 }
 
 @Preview
 @Composable
-private fun ConversationScreenPreview() = ConversationScreen()
+private fun ConversationScreenPreview() = ConversationScreen(
+    message = "",
+    onMessageChange = {},
+)
