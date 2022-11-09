@@ -2,10 +2,7 @@ package be.blackgear.android101_sance2.ui
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material.Scaffold
-import androidx.compose.material.Text
-import androidx.compose.material.TextField
-import androidx.compose.material.TopAppBar
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -37,6 +34,9 @@ fun ConversationScreen(
 
 @Composable
 fun MessageCard(message: String, author: String, date: String, modifier: Modifier = Modifier) {
+    Card(modifier = modifier) {
+
+    }
 }
 
 @Preview
