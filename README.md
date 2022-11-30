@@ -1,6 +1,6 @@
 # numediart-2022
 
-### [Les listes](./listes.md)
+### [Les listes](./lists.md)
 
 ## Apprendre Kotlin
 
