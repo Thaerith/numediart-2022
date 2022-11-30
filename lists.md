@@ -86,4 +86,57 @@ private fun Preview() {
 
 ![Screenshot 2022-11-30 at 16 51 04](https://user-images.githubusercontent.com/32436781/204844844-eca4094d-920a-4d2d-80c3-002451e2d3be.png)
 
+## Mapper des données à un layout
+
+``` kotlin
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.material.Scaffold
+import androidx.compose.material.Text
+import androidx.compose.material.TopAppBar
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+
+@Composable
+fun Screen(personnes: List<Personne>) = Scaffold(
+    topBar = {
+        TopAppBar { Text("List d\'éléments") }
+    }
+) {
+    LazyColumn(
+        contentPadding = PaddingValues(
+            start = 16.dp,
+            end = 16.dp,
+        ),
+        verticalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        items(personnes) { personne ->
+            Column {
+                Text("${personne.firstname} ${personne.name}")
+                Text("${personne.age}")
+            }
+        }
+    }
+}
+
+@Preview
+@Composable
+private fun Preview() {
+    val personnes = listOf(
+        Personne("Le Gaulois", "Astérix", 45),
+        Personne("Oui", "Oui", 33),
+    )
+
+    Screen(personnes = personnes)
+}
+
+data class Personne(
+    val name: String,
+    val firstname: String,
+    val age: Int,
+)
+```
+
 (1.) Un scope permet de fournir des fonctionnalités supplémentaires dans un context particulier. Dans le cas du `LazyColumn`, le scope ajoutera les fonctions pour ajouter des éléments manuellement ou dynamiquement.
