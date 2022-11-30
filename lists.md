@@ -29,6 +29,14 @@ fun Screen(labels: List<String>) = Scaffold(
         }
     }
 }
+
+@Preview
+@Composable
+private fun Preview() {
+    val labels = listOf("a", "b", "c")
+    
+    Screen(labels = labels)
+}
 ```
 
 ![Screenshot 2022-11-30 at 16 47 50](https://user-images.githubusercontent.com/32436781/204844504-2c1c389b-0996-49cb-a8a9-c98af532a52a.png)
@@ -65,6 +73,14 @@ fun Screen(labels: List<String>) = Scaffold(
             Text(label)
         }
     }
+}
+
+@Preview
+@Composable
+private fun Preview() {
+    val labels = listOf("a", "b", "c")
+    
+    Screen(labels = labels)
 }
 ```
 
